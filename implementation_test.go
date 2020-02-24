@@ -34,6 +34,12 @@ func (s *MySuite) TestPrefixToPostfixSimpleSecond(c *C) {
 	c.Check(res, Equals, "3 2 ^ 5 6 + +")
 }
 
+func (s *MySuite) TestPrefixToPostfixSimpleThird(c *C) {
+	res, err := PrefixToPostfix("- * 2 3 / 4 * 5 9")
+	c.Check(err, Equals, nil)
+	c.Check(res, Equals, "2 3 * 4 5 / 9 * -")
+}
+
 /* Complicated test cases */
 
 func (s *MySuite) TestPrefixToPostfixComplicatedFirst(c *C) {
