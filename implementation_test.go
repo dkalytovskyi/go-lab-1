@@ -15,9 +15,9 @@ var _ = Suite(&MySuite{})
 /* Example */
 
 func (s *MySuite) ExamplePrefixToPostfix(c *C) {
-	res, err := PrefixToPostfix("* + 22 45 - 3 17")
+	res, err := PrefixToPostfix("* + 2 45 - 3 17")
 	c.Check(err, Equals, nil)
-	c.Check(res, Equals, "22 45 + 3 17 - *")
+	c.Check(res, Equals, "2 45 + 3 17 - *")
 }
 
 /* Simple test cases */
