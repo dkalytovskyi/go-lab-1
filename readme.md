@@ -1,0 +1,1 @@
+See the history of builds here: https://travis-ci.com/dkalytovskyi/go-lab-1/builds
