@@ -2,19 +2,11 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"log"
 	"os"
 	"strings"
 )
 
 func main() {
-	content, err := ioutil.ReadFile("buildVersion.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	buildVersion := string(content)
-
 	fmt.Println(buildVersion)
 
 	args := os.Args[1:]
