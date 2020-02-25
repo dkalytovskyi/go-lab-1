@@ -8,7 +8,5 @@ test:
 
 out/example: implementation.go main.go
 	mkdir out
-	myVersion=$(git describe)
-	echo "package main
-	var buildVersion = \"${myVersion}\"" > buildVersion.go
+	printf "package main\nvar buildVersion = \"$(git describe)\"" > buildVersion.go
 	go build -o out/example.exe .
